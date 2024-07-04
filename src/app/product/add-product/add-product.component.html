@@ -1,0 +1,60 @@
+<div class="container mt-4"><br>
+    <h3 class="text-center">Add your Product here</h3>
+    <form [formGroup]="addForm" (ngSubmit)="addProduct()">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" id="name" class="form-control" formControlName="name">
+        </div>
+        <div class="alert alert-danger" *ngIf="f['name'].invalid && f['name'].dirty && f['name'].hasError('required')">
+            Name is not Provided
+        </div>
+        <div class="alert alert-danger" *ngIf="f['name'].invalid && f['name'].dirty && f['name'].hasError('minlength')">
+            Name should have minimum 4 characters
+        </div>
+        <div class="alert alert-danger" *ngIf="f['name'].invalid && f['name'].dirty && f['name'].hasError('forbidden')">
+            yahoo not allowed as name
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Price:</label>
+            <input type="number" id="price" class="form-control" formControlName="price">
+        </div>
+        <div class="alert alert-danger"
+            *ngIf="f['price'].invalid && f['price'].touched && f['price'].hasError('required')">
+            Price is not Provided
+        </div>
+        <div class="alert alert-danger" *ngIf="f['price'].invalid && f['price'].touched && f['price'].hasError('min')">
+            Price should be more than 0
+        </div>
+        <div class="alert alert-danger" *ngIf="f['price'].invalid && f['price'].touched && f['price'].hasError('max')">
+            Price should be less than 10000
+        </div>
+        <div class="mb-3">
+            <label for="discount" class="form-label">Discount:</label>
+            <input type="number" id="discount" class="form-control" formControlName="discount">
+        </div>
+        <div class="alert alert-danger"
+            *ngIf="f['discount'].invalid && f['discount'].touched && f['discount'].hasError('required')">
+            discount is not Provided
+        </div>
+        <div class="alert alert-danger"
+            *ngIf="f['discount'].invalid && f['discount'].touched && f['discount'].hasError('min')">
+            discount should be more than 0
+        </div>
+        <div class="alert alert-danger"
+            *ngIf="f['discount'].invalid && f['discount'].touched && f['discount'].hasError('max')">
+            discount should be less than 100
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description:</label>
+            <textarea id="description" class="form-control" formControlName="description"></textarea>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary">Submit</button>
+        </div>
+        <input type="hidden" formControlName="imageUrl">
+    </form><br>
+</div><br><br><br>
+
+<!-- {{ addForm.value | json }}
+
+{{f['name'].value}} -->

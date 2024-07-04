@@ -1,0 +1,38 @@
+<br>
+<div class="container" *ngIf="(myProduct$ | async) as product">
+    <div>
+        <button class="btn btn-primary" (click)="goBack()">Back</button>
+    </div><br><br>
+    <div class="details"><br>
+    <div class="row m-4">
+        <div class="col-lg-6">
+            <img [src]="product.imageUrl" width="45%">
+        </div>
+        <div class="col-lg-6">
+            <h1>{{product.name}}</h1>
+            <h3><strong>₹</strong>{{product.price}}</h3>
+            <h4 style="color: green;">{{product.discount}} % off</h4>
+            <h5>{{product.description}}</h5>
+        </div>
+    </div><br>
+</div>
+    <div class="row m-4">
+        <div class="col-lg-3">
+            <button class="btn btn-success" [routerLink]="['/products',product.id,'reviews']">Review</button>
+        </div>
+        <div class="col-lg-3">
+            <button class="btn btn-info"
+                [routerLink]="['/products',product.id,'specifications']">Specification</button>
+        </div>
+        <div class="col-lg-3">
+            <button class="btn btn-warning" [routerLink]="['/products',product.id,'edit']">Edit Details</button>
+        </div>
+        <div class="col-lg-3">
+            <button class="btn btn-danger" (click)="deleteProduct(product.id)">Delete Product</button>
+        </div>
+    </div>
+    <div class="row m-4">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+<br><br><br><br><br>

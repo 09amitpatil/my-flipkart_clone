@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="alert alert-danger" *ngIf="errorMessage">
+    {{errorMessage}}
+  </div>
+
+  <div class="mb-4">
+    <input type="text" style="width: 700px;margin-left: 210px;" placeholder="Search for Products....."
+      class="form-control" [(ngModel)]="searchText">
+  </div>
+  <div class="col-md-3 mb-4" *ngFor="let p of copyOfProducts">
+    <div class="card h-100">
+      <img [src]="p.imageUrl" class="card-img-top" [alt]="p.name">
+      <div class="card-body">
+        <h5 class="card-title" style="cursor: pointer;" [routerLink]="['/products',p.id]">{{p.name}}</h5>
+        <hr>
+        <p class="card-text">{{p.description}}</p>
+        <h5><strong>₹</strong> {{p.price}}</h5>
+        <h6 style="color: green;">{{p.discount}}% off</h6>
+        <hr>
+        <a (click)="addToCart()" class="btn btn-primary">Add to cart</a>
+      </div>
+    </div>
+  </div>
+  <div class="text-center">
+    <button routerLink="/products/add" class="btn btn-success mb-4">Add Product</button>
+  </div>

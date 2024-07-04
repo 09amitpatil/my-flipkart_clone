@@ -1,0 +1,48 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 review-section">
+            <h2 class="review-header text-center">Product Review</h2>
+            <form (ngSubmit)="submitForm()" #rf="ngForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required
+                    [(ngModel)]="reviewForm.name" name="name" #nameVar="ngModel">
+                </div><br>
+                <div class="alert alert-danger" *ngIf="nameVar.invalid && nameVar.touched">
+                    Name not Valid
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" 
+                    [(ngModel)]="reviewForm.email" name="email" required>
+                </div><br>
+                <div class="form-group">
+                    <label for="rating">Rating:</label>
+                    <select class="form-select" id="rating" 
+                    [(ngModel)]="reviewForm.rating" name="rating" required>
+                        <option> Choose Option</option>
+                        <option>1 - Excellent</option>
+                        <option>2 - Good</option>
+                        <option>3 - Average</option>
+                        <option>4 - Poor</option>
+                        <option>5 - Very Poor</option>
+                    </select>
+                </div><br>
+                <div class="form-group">
+                    <label for="description">Review:</label>
+                    <textarea class="form-control" id="description" rows="5" placeholder="Write your review" 
+                    [(ngModel)]="reviewForm.description"
+                    name="description" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block mt-4" [disabled]="rf.invalid">Submit Review</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- {{reviewForm.name}}
+{{reviewForm.email}}
+{{reviewForm.rating}}
+{{reviewForm.description}} -->
+
+{{reviewForm | json}}

@@ -1,0 +1,76 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "SAMSUNG 24 inch Full HD",
+      "imageUrl": "/assets/images/samsung.jpeg",
+      "description": "Panel Type: IPS Panel | Screen Resolution Type: Full HD | Brightness: 250 nits | Response Time: 5 ms | Refresh Rate: 75 Hz | HDMI Ports - 1",
+      "price": 7899,
+      "discount": 48
+    },
+    {
+      "id": "2",
+      "name": "Lenovo L-Series 27 inch",
+      "imageUrl": "/assets/images/lenovo.jpeg",
+      "description": "Panel Type: IPS Panel | Screen Resolution Type: Full HD | Brightness: 300 nits | Response Time: 4 ms | Refresh Rate: 100 Hz | 3 Years Warranty",
+      "price": 12229,
+      "discount": 27
+    },
+    {
+      "id": "3",
+      "name": "OnePlus 24 inch Full HD",
+      "imageUrl": "/assets/images/oneplus.jpeg",
+      "description": " Model Name :E 24 |  Display :60.96 cm (24 inch) LED Display | Backlight :LED Backlit Backlight | Panel Type:IPS | Resolution :1920x1080 pixels",
+      "price": 6974,
+      "discount": 65
+    },
+    {
+      "id": "4",
+      "name": "ZEBRONICS 32 inch Curved",
+      "imageUrl": "/assets/images/zebronics.jpeg",
+      "description": "Panel Type: VA Panel | Screen Resolution Type: Full HD | VGA Support | HDMI | Brightness: 250 nits | Response Time: 8 ms | Refresh Rate:75Hz",
+      "price": 12999,
+      "discount": 56
+    },
+    {
+      "id": "5",
+      "name": "Lifelong LightBeam",
+      "imageUrl": "/assets/images/lifelong1.jpeg",
+      "description": " (1200 lm / 1 Speaker) | Portable Android 720p HD Native with 4K,Upto 120-inch Display, Inbuilt Speaker,Bluetooth, Wi-Fi, Smart Apps Support like Netflix, Prime,Yotube Smart Home Projector (White)",
+      "price": 7499,
+      "discount": 50
+    },
+    {
+      "id": "6",
+      "name": "Lifelong Minipix",
+      "imageUrl": "/assets/images/lifelong2.jpeg",
+      "description": "(3500 lm / 1 Speaker) |  Portable Android 720p HD Native with 4K, Upto 120-inch Display, Inbuilt Speaker, Bluetooth, Wi-Fi,Smart Apps Support like Netflix, Prime,Youtube Smart Home Projector (Black)",
+      "price": 8999,
+      "discount": 55
+    },
+    {
+      "id": "7",
+      "name": "Lifelong TruePixel",
+      "imageUrl": "/assets/images/lifelong3.jpeg",
+      "description": "(6000 lm / 1 Speaker) | Portable Android 1080p Native Full HD,Upto 150-inch Display, Inbuilt Speaker, Bluetooth, Wi-Fi,Smart Apps Support like Netflix, Prime,Youtube Smart Home Projector (White)",
+      "price": 12999,
+      "discount": 55
+    },
+    {
+      "id": "8",
+      "name": "Lifelong SmartStream",
+      "imageUrl": "/assets/images/lifelong4.jpeg",
+      "description": " (7000 lm / 1 Speaker) | Portable Android 1080p Full HD with 4k,Upto 150-inch Display, Auto Focus Enabled ,Inbuilt Speaker, Bluetooth, Wi-Fi,Smart Apps Support like Netflix, Prime,Youtube Home Projector (Black)",
+      "price": 12999,
+      "discount": 62
+    },
+    {
+      "name": "Lifelong projector",
+      "price": 17000,
+      "discount": 67,
+      "description": "New 2024 projector Full HD",
+      "imageUrl": "/assets/images/lifelong4.jpeg",
+      "id": "b5a8"
+    }
+  ]
+}
